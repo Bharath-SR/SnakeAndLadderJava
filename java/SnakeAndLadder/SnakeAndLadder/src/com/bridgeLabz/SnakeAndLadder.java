@@ -12,7 +12,8 @@ import java.util.Random;
 public class SnakeAndLadder {
 
 	/**
-	 * @param args
+	 * UC4
+	 * Repeat till the Player reaches the winning position 100. - Note In case the player
 	 */
 	public static void main(String[] args) {
 		//Driving Class
@@ -20,8 +21,9 @@ public class SnakeAndLadder {
 		final int noOfPlayer=1;
 		int position =0;
 		int diceno =0;
-		int positionmoved;
+		int positionmoved = 0;
 		int checkForOption;
+		while (positionmoved < 100) {
 		//  for dice
 		Random r = new Random();
 		diceno =r.nextInt(6)+1;
@@ -33,16 +35,22 @@ public class SnakeAndLadder {
 		System.out.println("option"+checkForOption);
 		if(checkForOption == 0) {
 			System.out.println("NO PLAY");
-			positionmoved = 0;
+			positionmoved = 0+positionmoved;
 			System.out.println("positionMoved"+positionmoved);
 		}else if(checkForOption == 1) {
 			System.out.println("LADDER");
-			positionmoved= position+diceno;
+			positionmoved= positionmoved+diceno;
 			System.out.println("positionMoved"+positionmoved);
 		}else if(checkForOption == 2){
 			System.out.println("SNAKE");
-			positionmoved= position-diceno;
+			positionmoved= positionmoved-diceno;
+			System.out.println(positionmoved);
+			if(positionmoved <= 0) {
+				positionmoved=0;
+			}
 			System.out.println("positionMoved"+positionmoved);
+		}
+			System.out.println(positionmoved);
 		}
 	}
 
