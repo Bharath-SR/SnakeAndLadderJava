@@ -13,8 +13,10 @@ public class SnakeAndLadder {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+		//Driving Class
+		//Initializing and declaring final since there will be only one player
+		final int noOfPlayer=1;
+		int startpostion =0;
 	}
 
 }
